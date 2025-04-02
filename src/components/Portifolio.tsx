@@ -3,7 +3,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from './Container';
-import { Heading2, Paragraph } from '../styles/Typography';
+// import { Subheading, Paragraph } from '../styles/Typography';
+import { Heading, Subheading, Paragraph } from '../styles/Typography';
+
+
 import { motion } from 'framer-motion';
 
 const Section = styled.section`
@@ -67,7 +70,7 @@ const Portifolio = () => {
   return (
     <Section id="visagimos">
       <Container>
-        <Heading2 style={{ textAlign: 'left', marginBottom: '2rem' }}>Portfólio</Heading2>
+        <Subheading style={{ textAlign: 'left', marginBottom: '2rem' }}>Portfólio</Subheading>
         <PortifolioGrid>
           {projects.map((item, index) => (
             <Projeto key={index} $reverse={index % 2 !== 0}>

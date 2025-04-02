@@ -2,12 +2,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from './Container';
-import { Heading2, Paragraph } from '../styles/Typography';
+import { Heading, Subheading, Paragraph } from '../styles/Typography';
 import { motion } from 'framer-motion';
 
 const Section = styled.section`
   padding: 6rem 0; /* aumentado de 2rem 0 para 6rem 0 */
-  background: ${({ theme }) => theme.headerBackground};
+  background: ${({ theme }) => theme.beige};
   color: ${({ theme }) => theme.text};
 `;
 
@@ -44,7 +44,7 @@ const Sobre = () => {
   return (
     <Section id="sobre">
       <Container>
-        <Heading2>Sobre mim</Heading2>
+        <Subheading>Sobre mim</Subheading>
         <SobreGrid>
           <Paragraph
             as={motion.p}

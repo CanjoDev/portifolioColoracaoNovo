@@ -7,7 +7,7 @@ import {
   TiktokLogo,
   // EmailLogo
 } from 'phosphor-react';
-import {Heading2, Paragraph } from '../styles/Typography';
+import { Heading, Subheading, Paragraph } from '../styles/Typography';
 
 const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.accent};
@@ -58,7 +58,7 @@ const Icon = styled.a`
 const Footer = () => {
   return (
     <FooterContainer id="contact">
-      <Heading2>Siga nos nas redes sociais</Heading2>
+      <Subheading>Siga nos nas redes sociais</Subheading>
       <IconRow>
         <Icon href="https://wa.me/SEUNUMERO" target="_blank">
           <WhatsappLogo size={26} weight="light" />

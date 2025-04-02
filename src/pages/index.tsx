@@ -5,6 +5,7 @@ import Hero from '../sections/Hero';
 import Contact from '../components/Contact';
 import Portfolio from '../components/Portifolio';
 import Sobre from '../components/Sobre';
+import ComboColoracao from '../components/comboColoracao';
 
 export default function Home() {
   return (
@@ -12,9 +13,11 @@ export default function Home() {
       <Header />
       <Sobre />
       <Hero />
+      <ComboColoracao />
       <Portfolio />
       <Contact />
       <Footer />
+      
     </>
   );
 }

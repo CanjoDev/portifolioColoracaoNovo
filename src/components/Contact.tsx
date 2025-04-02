@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import styled from 'styled-components';
-import { Heading2, Paragraph } from '../styles/Typography';
-
+import { Heading, Subheading, Paragraph } from '../styles/Typography';
 
 const ContactSection = styled.section`
   padding: 5rem 2rem 4rem;
@@ -75,7 +74,7 @@ const StyledForm = styled.form`
 const Contact = () => {
   return (
     <ContactSection id="contact">
-      <Heading2>Entre em contato</Heading2>
+      <Subheading>Entre em contato</Subheading>
       <Paragraph style={{ marginBottom: '1.5rem' }}>
         Email: <strong>contato@consultoradeestilo.com.br</strong>
       </Paragraph>

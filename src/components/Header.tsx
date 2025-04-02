@@ -6,6 +6,7 @@ import {
   Briefcase,
   Envelope
 } from 'phosphor-react';
+import { Heading, Subheading, Paragraph } from '../styles/Typography';
 
 const HeaderContainer = styled.header`
   width: 100%;
