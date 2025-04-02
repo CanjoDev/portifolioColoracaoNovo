@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import styled from 'styled-components';
 import Container from './Container';
@@ -17,33 +18,15 @@ const PortifolioGrid = styled.div`
   gap: 2rem;
 `;
 
-const Projeto = styled.div<{ reverse?: boolean }>`
-  display: grid;
-  grid-template-columns: 0.5fr 0.6fr;
+const Projeto = styled.div<{ $reverse?: boolean }>`
+  display: flex;
+  flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
   gap: 4rem;
   align-items: center;
 
-  ${({ reverse }) =>
-    reverse &&
-    `
-    direction: rtl;
-    text-align: left;
-
-    & > * {
-      direction: ltr;
-    }
-  `}
-
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
-
-    ${({ reverse }) =>
-      reverse &&
-      `
-      direction: initial;
-      text-align: center;
-    `}
   }
 `;
 
@@ -84,10 +67,13 @@ const Portifolio = () => {
   return (
     <Section id="visagimos">
       <Container>
-        <Heading2 style={{ textAlign: 'left', marginBottom: '2rem'}}>Portfólio</Heading2>
+        <Heading2 style={{ textAlign: 'left', marginBottom: '2rem' }}>Portfólio</Heading2>
         <PortifolioGrid>
           {projects.map((item, index) => (
-            <Projeto key={index} reverse={index % 2 !== 0}>
+            <Projeto key={index} $reverse={index % 2 !== 0}>
+              <FotoProjeto>
+                <img src={item.img} alt={`Projeto ${index + 1}`} />
+              </FotoProjeto>
               <Paragraph
                 as={motion.p}
                 initial={{ opacity: 0, y: 20 }}
@@ -96,9 +82,6 @@ const Portifolio = () => {
               >
                 {item.texto}
               </Paragraph>
-              <FotoProjeto>
-                <img src={item.img} alt={`Projeto ${index + 1}`} />
-              </FotoProjeto>
             </Projeto>
           ))}
         </PortifolioGrid>
