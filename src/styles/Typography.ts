@@ -13,19 +13,21 @@ export const Heading1 = styled.h1`
 `;
 
 export const Heading2 = styled.h2`
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Reduzido de 10rem para 2rem */
 
   @media (max-width: 768px) {
     font-size: 1.6rem;
+    text-align: center; /* Ajuda na responsividade */
   }
 `;
 
+
 export const Paragraph = styled.p`
-  font-size: 1.15rem;
-  line-height: 1.23;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin-bottom: 12rem;
   max-width: 100ch;
   // color: ${({ theme }) => theme.text};
 

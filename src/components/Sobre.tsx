@@ -6,10 +6,11 @@ import { Heading2, Paragraph } from '../styles/Typography';
 import { motion } from 'framer-motion';
 
 const Section = styled.section`
-  padding: 2rem 0;
+  padding: 6rem 0; /* aumentado de 2rem 0 para 6rem 0 */
   background: ${({ theme }) => theme.headerBackground};
   color: ${({ theme }) => theme.text};
 `;
+
 
 const SobreGrid = styled.div`
   display: grid;
@@ -50,6 +51,7 @@ const Sobre = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
+            
           >
           Sou consultora de cores e de Visagismo. Especialista no Método Visagismo Espelhado, método em que crio simulações altamente fidedignas das minhas clientes com cortes e cores de cabelos ideias para a beleza de cada uma. 
           Além disso estou concluindo a graduação de Publicidade e Propaganda e sou sócia da Indicare, empresa especializada em consultoria comercial.

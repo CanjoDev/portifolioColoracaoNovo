@@ -14,10 +14,10 @@ export const lightTheme = {
 
   // novo acesso via theme.colors
   colors: {
-    primary: '#D65F2C',
-    accent: '#2E8B57',
+    primary: '#BD5031',
+    accent: '#0F3D37',
     gold: '#FFDDA0',
-    beige: '#F2C6A0',
+    beige: '#FCF4F9',
     softGreen: '#A3D9A5',
     softSand: '#E9E4DC',
     bordaSobre: '	#0000CD',
