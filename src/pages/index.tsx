@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 import Portfolio from '../components/Portifolio';
 import Sobre from '../components/Sobre';
 import ComboColoracao from '../components/comboColoracao';
+import ComboVisagismo from '../components/comboVisagismo';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Sobre />
       <Hero />
       <ComboColoracao />
+      <ComboVisagismo />
       <Portfolio />
       <Contact />
       <Footer />

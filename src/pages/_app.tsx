@@ -1,4 +1,3 @@
-
 import type { AppProps } from 'next/app';
 import { CustomThemeProvider } from '../theme/ThemeContext';
 import { ThemeToggle } from '../components/ThemeToggle';

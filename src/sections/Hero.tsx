@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Container from '../components/Container'; // caminho relativo
-import { Heading1, Paragraph } from '../styles/Typography'; // caminho relativo
+import { Heading, Paragraph } from '../styles/Typography';
+
 
 const Section = styled.section`
   background: ${({ theme }) => theme.colors.accent};
@@ -14,16 +15,17 @@ const Section = styled.section`
 `;
 
 const HeroGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
+  display: flex;
+  flex-direction: column; // Mobile: imagem depois texto (ordem DOM)
+  gap: 3rem;
 
-  @media (min-width: 769px) {
-    flex-direction: row-reverse;
+  @media (min-width: 768px) {
+    flex-direction: row-reverse; // Desktop: texto → imagem
+    align-items: center;
+    justify-content: center;
   }
-
 `;
+
 
 const TextContent = styled.div`
   display: flex;
@@ -54,6 +56,7 @@ const ModernImageContainer = styled.div`
   justify-content: center;
 
   img {
+    max-width: 90vw; // responsivo para mobile
     width: 320px;
     height: auto;
     border-radius: 80% 28% 47% 40% / 37% 30% 70% 63%;
@@ -61,16 +64,10 @@ const ModernImageContainer = styled.div`
 
     box-shadow: ${({ theme }) =>
       theme.title === 'dark'
-        ? `0 12px 32px ${theme.colors.primary}AA` // Roxo com opacidade
+        ? `0 12px 32px ${theme.colors.primary}AA`
         : `0 10px 32px ${theme.colors.bordaSobre}AA`}; 
 
     transition: all 0.3s ease;
-  }
-
-  @media (max-width: 768px) {
-    img {
-      width: 660px;
-    }
   }
 `;
 
@@ -96,7 +93,7 @@ const Hero = () => {
 
 
           <TextContent>
-            <Heading1
+            <Heading
               as={motion.h1}
               initial={{ opacity: 0, y: -40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -104,7 +101,7 @@ const Hero = () => {
               
             >
               Descubra sua essência com a Coloração Pessoal 💫
-            </Heading1>
+            </Heading>
 
             <Paragraph
               as={motion.p}

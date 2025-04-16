@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 const Section = styled.section`
   padding: 6rem 0;
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.textRealce};
+  color: ${({ theme }) => theme.colors.primaryLight};
 `;
 
 const PortifolioGrid = styled.div`
@@ -44,8 +44,8 @@ const FotoProjeto = styled.div`
     object-fit: cover;
     box-shadow: ${({ theme }) =>
       theme.title === 'dark'
-        ? `0 12px 32px ${theme.colors.bordaSobre}AA`
-        : `0 12px 32px ${theme.colors.bordaSobre}CC`};
+        ? `0 12px 32px ${theme.colors.bordViolet}AA`
+        : `0 12px 32px ${theme.colors.bordViolet}CC`};
   }
 `;
 

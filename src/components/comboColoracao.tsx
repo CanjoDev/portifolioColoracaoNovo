@@ -18,6 +18,7 @@ const Title = styled(motion.h2)`
   margin-bottom: 3rem;
   color: ${({ theme }) => theme.colors.primary};
   font-family: ${({ theme }) => theme.typography.heading};
+
 `;
 
 const Grid = styled.div`
